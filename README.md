@@ -1,4 +1,5 @@
 # C2-2022
+Projet d'automatisation des plaintes des citoyens:
 Je travaille comme responsable informatique à une fédération des Communes.
 Après la pandémie de Corona, et parce que le Liban connaît de nombreuses crises économiques, un centre a été créé pour recevoir les plaintes des citoyens pour un suivi sur le terrain et direct.
 Les plaintes sont suivies de manière non professionnelle en enregistrant quotidiennement les plaintes sur un fichier Excel.
