@@ -1,0 +1,36 @@
+<style>
+table, th, td {
+  border: 1px solid black;
+}
+h2 { background: green;
+border-bottom: 5px solid green;
+
+}
+
+
+
+div {
+  border-bottom: double;
+}
+</style>
+<h2 class="text-center"> List d'usagers d'application</h2>
+<div class="container">
+  <table class = "table table-striped">
+
+    <thead>
+    <tr>
+      <th>Section administrative</th>
+      <th> usager </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor = "let usager of usagers">
+      <td> {{ usager.section }} </td>
+      <td> {{ usager.usagernom }} </td>
+
+
+    </tr>
+    </tbody>
+  </table>
+</div><br><br>
+

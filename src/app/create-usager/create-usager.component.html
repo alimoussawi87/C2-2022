@@ -1,0 +1,56 @@
+<style>
+table, th, td {
+  border: 1px solid black;
+}
+h3 {
+   background: #88ccff;
+border-bottom: 5px solid #33aaff;
+}
+
+div {
+
+  border-bottom: double;
+}
+</style>
+<div class="col-md-6 offset-md-3">
+  <h3> Ajouter un usager</h3>
+  <form (ngSubmit) = "onSubmit()">
+
+    <div class="form-group">
+      <label> nom de l'usager</label>
+      <input type="text" class ="form-control" id = "usagernom"
+             [(ngModel)] = "usager.usagernom" name = "usagernom">
+    </div>
+
+    <div class="form-group">
+      <label> Password</label>
+      <input type="password" class ="form-control" id = "usagerpass"
+             [(ngModel)] = "usager.usagerpass" name = "usagepass">
+    </div>
+
+    <div><br>
+      <label><b>Section:</b> </label><br>
+
+            <input type="radio" class ="" ng-model = "usager.section"
+             name = "section" value="HR" (change)="onChange($event)">
+            <label>HR</label><br>
+      <input type="radio" class ="" ng-model = "usager.section"
+             name = "section" value="Police" (change)="onChange($event)" >
+      <label>Police</label><br>
+      <input type="radio" class ="" ng-model = "usager.section"
+             name = "section" value="IT" (change)="onChange($event)">
+      <label>IT</label><br>
+      <input type="radio" class ="" ng-model = "usager.section"
+             name = "section" value="Sanitaire" (change)="onChange($event)">
+      <label>Sanitaire</label><br>
+      <input type="radio" class ="" ng-model = "usager.section"
+             name = "section" value="Administration" (change)="onChange($event)">
+      <label>Administration</label><br>
+
+    </div><br>
+
+    <button class = "btn btn-success" type ="submit">Submit</button>
+
+  </form>
+</div>
+

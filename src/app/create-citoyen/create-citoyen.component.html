@@ -1,0 +1,50 @@
+<style>
+table, th, td {
+  border: 1px solid black;
+}
+h3 {
+   background: #88ccff;
+border-bottom: 5px solid #33aaff;
+}
+
+div {
+
+  border-bottom: double;
+}
+</style>
+<div class="col-md-6 offset-md-3">
+  <h3> Ajouter un citoyen plaignant</h3>
+  <form (ngSubmit) = "onSubmit()">
+
+    <div class="form-group">
+      <label> Le prenom</label>
+      <input type="text" class ="form-control" id = "prenomc"
+             [(ngModel)] = "citoyen.prenomc" name = "prenomc">
+    </div>
+
+    <div class="form-group">
+      <label> Le nom</label>
+      <input type="text" class ="form-control" id = "nomc"
+             [(ngModel)] = "citoyen.nomc" name = "nomc">
+    </div>    <div class="form-group">
+    <label> Telephone</label>
+    <input type="tel" class ="form-control" id = "telephonec"
+           [(ngModel)] = "citoyen.telephonec" name = "telephonec">
+  </div>
+    <div class="form-group">
+      <label>La date</label>
+      <input type="date" class ="form-control" id = "datec"
+             [(ngModel)] = "citoyen.datec" name = "datec">
+    </div>
+    <div class="form-group">
+      <label>Location du citoyen</label>
+      <input type="text" class ="form-control" id = "locationc"
+             [(ngModel)] = "citoyen.locationc" name = "locationc">
+    </div>
+
+
+    <button class = "btn btn-success" type ="submit">Ajouter</button>
+
+  </form>
+</div>
+

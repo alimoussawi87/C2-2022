@@ -1,0 +1,40 @@
+<style>
+table, th, td {
+  border: 1px solid black;
+}
+h2 {
+   background: #00aa00;
+border-bottom: 5px solid green;
+}
+
+
+div {
+  border-bottom: double;
+}
+</style>
+
+<h2 class="text-center"> List de citoyens plaignants </h2>
+<div class="container">
+<table class = "table table-striped">
+
+  <thead>
+  <tr>
+    <th>Nom de citoyen</th>
+    <th> Prenom de citoyen </th>
+    <th> Telephone de citoyen</th>
+    <th> Location de citoyen </th>
+    <th> date  d'insertion du citoyen </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor = "let citoyen of citoyens">
+    <td> {{ citoyen.nomc }} </td>
+    <td> {{ citoyen.prenomc }} </td>
+    <td> {{ citoyen.telephonec }} </td>
+    <td> {{ citoyen.locationc }} </td>
+    <td> {{ citoyen.datec }} </td>
+
+  </tr>
+  </tbody>
+</table>
+</div><br><br>

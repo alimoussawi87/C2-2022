@@ -1,0 +1,49 @@
+<style>
+table, th, td {
+  border: 1px solid black;
+}
+h2 {
+   background: #88ccff;
+border-bottom: 5px solid #33aaff;
+}
+
+div {
+
+  border-bottom: double;
+}
+</style>
+<h2 > Liste de plaintes</h2>
+<div class="container">
+<table class = "table table-striped">
+  <thead>
+  <tr>
+    <th>numéro du citoyen</th>
+    <th>numéro de plainte</th>
+    <th> date de la plainte </th>
+    <th> location de la plainte</th>
+    <th> details1 </th>
+    <th> details2 </th>
+    <th> details3 </th>
+    <th> resultat1 </th>
+    <th> resultat2 </th>
+    <th> resultat3 </th>
+    <th> valeur de resultats </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor = "let plainte of plaintes">
+    <td> {{ plainte.citid }} </td>
+    <td> {{ plainte.pnbr }} </td>
+    <td> {{ plainte.datep }} </td>
+    <td> {{ plainte.locationp }} </td>
+    <td> {{ plainte.details1 }} </td>
+    <td> {{ plainte.details2 }} </td>
+    <td> {{ plainte.details3 }} </td>
+    <td> {{ plainte.resultat1 }} </td>
+    <td> {{ plainte.resultat2 }} </td>
+    <td> {{ plainte.resultat3 }} </td>
+    <td> {{ plainte.valeur }} </td>
+  </tr>
+  </tbody>
+</table>
+</div><br><br>
