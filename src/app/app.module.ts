@@ -13,6 +13,7 @@ import { FormsModule } from '@angular/forms';
 import { UpdateUsagerComponent } from './update-usager/update-usager.component';
 import { UpdatePlainteComponent } from './update-plainte/update-plainte.component';
 import { UpdateCitoyenComponent } from './update-citoyen/update-citoyen.component';
+import {  AngularWebStorageModule } from 'angular-web-storage';
 
 @NgModule({
   declarations: [
@@ -32,8 +33,8 @@ import { UpdateCitoyenComponent } from './update-citoyen/update-citoyen.componen
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-
-  ],
+AngularWebStorageModule
+     ],
   providers: [],
   bootstrap: [AppComponent]
 })

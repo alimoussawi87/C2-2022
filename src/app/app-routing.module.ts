@@ -6,6 +6,8 @@ import { UsagerListComponent } from './usager-list/usager-list.component';
 import { CreateCitoyenComponent } from './create-citoyen/create-citoyen.component';
 import { CreatePlainteComponent } from './create-plainte/create-plainte.component';
 import { CreateUsagerComponent } from './create-usager/create-usager.component';
+import { UpdateUsagerComponent } from './update-usager/update-usager.component';
+import { UpdatePlainteComponent } from './update-plainte/update-plainte.component';
 import { Component } from '@angular/core';
 
 
@@ -15,6 +17,8 @@ const routes: Routes = [{path: 'lireCitoyensr', component: CitoyenListComponent}
                          {path: 'createCitoyenr', component: CreateCitoyenComponent},
                          {path: 'createPlainter', component: CreatePlainteComponent},
                          {path: 'createUsagerr', component: CreateUsagerComponent},
+                           {path: 'updateUsagerr', component: UpdateUsagerComponent},
+                             {path: 'updateplainter', component: UpdatePlainteComponent},
                           {path: '', redirectTo: 'lirePlaintesr', pathMatch: 'full'}
 
 

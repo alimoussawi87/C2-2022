@@ -27,10 +27,13 @@ div {
     <tr *ngFor = "let usager of usagers">
       <td> {{ usager.section }} </td>
       <td> {{ usager.usagernom }} </td>
+      <td>
+        <button (click) = "updateUsager(usager.id)" class = "btn btn-info"> Update {{ usager.id }} </button></td>
 
 
     </tr>
     </tbody>
   </table>
 </div><br><br>
+<div *ngIf="submitted=== true"><h1>{{this.idx}}+{{this.usagera!.usageru}} </h1></div><br><br>
 

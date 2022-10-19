@@ -16,33 +16,37 @@ usager: Usager = new Usager();
 
 
   constructor(private usagerService: UsagerService,
-                  private router: Router) { }
+                  private router: Router, private activatedRoute:ActivatedRoute) { }
 
 
   ngOnInit(): void
    {
+
    }
 
  saveUsager(){
+    setTimeout(() => {
+                     this.router.navigate(['//lireUsagersr']);
+
+           }, 3000);
+
     this.usagerService.createUsager(this.usager).subscribe( data =>{
       console.log(data);
 
-this.goToUsagersList();
+
     },
     error => console.log(error));
 }
- goToUsagersList(){
 
-   this.router.navigate(['lireUsagers'] );
-
-}
 onChange(e: any) {
    this.usager.section= e.target.value;
    this.usager.usageru=e.target.value+this.usager.usagernom;
 }
   onSubmit(){
-  console.log(this.usager);
+
+
        this.saveUsager();
+
       }
 
   }

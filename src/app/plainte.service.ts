@@ -18,4 +18,8 @@ private baseURL = "http://localhost:8080/lirePlaintes";
 
             return this.httpClient.post(`${this.baseURL}`, plainte);
           }
+          updatePlainte(plainte: Plainte): Observable<Object>{
+                      this.baseURL = "http://localhost:8080/updatePlainte";
+                       return this.httpClient.put(`${this.baseURL}`, plainte);
+                        }
 }

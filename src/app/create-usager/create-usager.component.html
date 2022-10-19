@@ -19,7 +19,7 @@ div {
     <div class="form-group">
       <label> nom de l'usager</label>
       <input type="text" class ="form-control" id = "usagernom"
-             [(ngModel)] = "usager.usagernom" name = "usagernom">
+             [(ngModel)] = "usager.usagernom" name = "usagernom" >
     </div>
 
     <div class="form-group">
@@ -32,7 +32,7 @@ div {
       <label><b>Section:</b> </label><br>
 
             <input type="radio" class ="" ng-model = "usager.section"
-             name = "section" value="HR" (change)="onChange($event)">
+             name = "section" value="HR" (change)="onChange($event)" >
             <label>HR</label><br>
       <input type="radio" class ="" ng-model = "usager.section"
              name = "section" value="Police" (change)="onChange($event)" >
@@ -45,7 +45,10 @@ div {
       <label>Sanitaire</label><br>
       <input type="radio" class ="" ng-model = "usager.section"
              name = "section" value="Administration" (change)="onChange($event)">
-      <label>Administration</label><br>
+      <label>Administration</label>
+      <br><input type="radio" class ="" ng-model = "usager.section"
+                 name = "section" value="CentreDePlaintes" (change)="onChange($event)">
+      <label>Centre De Plaintes</label><br>
 
     </div><br>
 

@@ -43,7 +43,9 @@ div {
     <td> {{ plainte.resultat2 }} </td>
     <td> {{ plainte.resultat3 }} </td>
     <td> {{ plainte.valeur }} </td>
-  </tr>
+ <td>
+  <button (click) = "updatePlainte(plainte.id)" class = "btn btn-info"> Update {{ plainte.id }} </button></td>
   </tbody>
 </table>
 </div><br><br>
+<div *ngIf="submitted=== true"><h1>{{this.idx}}+{{this.plaintea!.citid}} </h1></div><br><br>

@@ -1,1 +1,99 @@
-<p>update-plainte works!</p>
+<style>
+table, th, td {
+  border: 1px solid black;
+}
+h3 {
+   background: #88ccff;
+border-bottom: 5px solid #33aaff;
+}
+
+div {
+
+  border-bottom: double;
+}
+</style>
+<div class="col-md-6 offset-md-3">
+  <h3> Ajouter une Plainte</h3>
+  <form (ngSubmit) = "onSubmit()">
+
+
+    <div class="form-group">
+      <label> Le citoyen</label>
+      <input type="text" class ="form-control" id = "citid"
+             [(ngModel)] = "plainte.citid" name = "citid">
+    </div>
+
+    <div class="form-group">
+      <label> Id de la plainte</label>
+      <input type="text" class ="form-control" id = "pnbr"
+             [(ngModel)] = "plainte.pnbr" name = "pnbr">
+    </div>
+    <div class="form-group">
+      <label>La date</label>
+      <input type="date" class ="form-control" id = "datep"
+             [(ngModel)] = "plainte.datep" name = "datep">
+    </div>
+    <div class="form-group">
+      <label>Zone de la plainte</label>
+      <input type="text" class ="form-control" id = "locationp"
+             [(ngModel)] = "plainte.locationp" name = "locationp">
+    </div>
+    <div class="form-group">
+      <label>Détails </label>
+      <input type="text" class ="form-control" id = "details1"
+             [(ngModel)] = "plainte.details1" name = "details1">
+    </div>
+    <div class="form-group">
+      <label>Détails </label>
+      <input type="text" class ="form-control" id = "details2"
+             [(ngModel)] = "plainte.details2" name = "details2">
+    </div>
+    <div class="form-group">
+      <label>Détails </label>
+      <input type="text" class ="form-control" id = "details3"
+             [(ngModel)] = "plainte.details3" name = "details3">
+    </div>
+    <div class="form-group">
+      <label>Résultat1 </label>
+      <input type="text" class ="form-control" id = "resultat1"
+             [(ngModel)] = "plainte.resultat1" name = "resultat1">
+    </div>
+    <div class="form-group">
+      <label>Résultat2 </label>
+      <input type="text" class ="form-control" id = "resultat2"
+             [(ngModel)] = "plainte.resultat2" name = "resultat2">
+    </div>
+    <div class="form-group">
+      <label>Résultat3 </label>
+      <input type="text" class ="form-control" id = "resultat3"
+             [(ngModel)] = "plainte.resultat3" name = "resultat3">
+    </div>
+
+    <div><br>
+      <label><b>Valeur:</b> </label><br>
+      <input type="radio" class ="" ng-model = "plainte.valeur"
+             name = "valeur" value="À la demande du citoyen" [checked]="true"
+             (change)="onChange($event)" >
+      <label>À la demande du citoyen</label><br>
+      <input type="radio" class ="" ng-model = "plainte.valeur"
+             name = "valeur" value="Acceptable"
+             (change)="onChange($event)" >
+      <label>Acceptable</label><br>
+      <input type="radio" class ="" ng-model = "plainte.valeur"
+             name = "valeur" value="indéterminé" (change)="onChange($event)">
+      <label>indéterminé</label><br>
+      <input type="radio" class ="" ng-model = "plainte.valeur"
+             name = "valeur" value="insatisfaisant" (change)="onChange($event)">
+      <label>insatisfaisant</label><br>
+      <input type="radio" class ="" ng-model = "plainte.valeur"
+             name = "valeur" value="Mauvaise" (change)="onChange($event)">
+      <label>Mauvaise</label><br><br>
+      <button class = "btn btn-success" type ="submit">Submit</button>
+    </div><br><br><br><br>
+
+
+
+
+  </form>
+</div>
+<div ><h1 >{{"id:"+plainte._value.id+" ,id plainte:"+plainte._value.pnbr+",location:"+plainte._value.locationp+", valeur:"+plainte._value.valeur}} </h1></div><br><br>
