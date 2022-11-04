@@ -3,8 +3,8 @@ table, th, td {
   border: 1px solid black;
 }
 h3 {
-   background: #88ccff;
-border-bottom: 5px solid #33aaff;
+   background: #ff8833;
+border-bottom: 5px solid #ff0000;
 }
 
 div {
@@ -13,7 +13,7 @@ div {
 }
 </style>
 <div class="col-md-6 offset-md-3">
-  <h3> Ajouter une Plainte</h3>
+  <h3 class="text-center"> Mis à jour d'une plainte</h3>
   <form (ngSubmit) = "onSubmit()">
 
 
@@ -88,7 +88,7 @@ div {
       <input type="radio" class ="" ng-model = "plainte.valeur"
              name = "valeur" value="Mauvaise" (change)="onChange($event)">
       <label>Mauvaise</label><br><br>
-      <button class = "btn btn-success" type ="submit">Submit</button>
+      <button class = "btn btn-success" type ="submit">Mis à jour</button>
     </div><br><br><br><br>
 
 

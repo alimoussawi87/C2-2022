@@ -14,7 +14,9 @@ import { UpdateUsagerComponent } from './update-usager/update-usager.component';
 import { UpdatePlainteComponent } from './update-plainte/update-plainte.component';
 import { UpdateCitoyenComponent } from './update-citoyen/update-citoyen.component';
 import {  AngularWebStorageModule } from 'angular-web-storage';
-
+import { ReactiveFormsModule } from '@angular/forms';
+import { SigninCitoyenComponent } from './signin-citoyen/signin-citoyen.component';
+import { SigninUsagerComponent } from './signin-usager/signin-usager.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,13 +28,16 @@ import {  AngularWebStorageModule } from 'angular-web-storage';
     CreatePlainteComponent,
     UpdateUsagerComponent,
     UpdatePlainteComponent,
-    UpdateCitoyenComponent
+    UpdateCitoyenComponent,
+    SigninCitoyenComponent,
+    SigninUsagerComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+      ReactiveFormsModule,
 AngularWebStorageModule
      ],
   providers: [],

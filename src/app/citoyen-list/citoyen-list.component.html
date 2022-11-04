@@ -3,7 +3,7 @@ table, th, td {
   border: 1px solid black;
 }
 h2 {
-   background: #00aa00;
+   background: #00dd22;
 border-bottom: 5px solid green;
 }
 
@@ -33,8 +33,13 @@ div {
     <td> {{ citoyen.telephonec }} </td>
     <td> {{ citoyen.locationc }} </td>
     <td> {{ citoyen.datec }} </td>
-
+    <td>
+      <button (click) = "updateCitoyen(citoyen.id)" class = "btn btn-info"> Mis à jour {{ citoyen.id }} </button></td>
+    <td>
+      <button (click) = "deleteCitoyen(citoyen.id)" class = "btn btn-danger"> Supprimer {{ citoyen.id }} </button></td>
   </tr>
   </tbody>
 </table>
 </div><br><br>
+<div *ngIf="submitted=== true"><h1>{{this.idx}}+{{this.citoyena!.nomc}} </h1></div><br><br>
+<div *ngIf="submittedd=== true"><h1>On supprime le citoyen qui a l'id:{{this.idx}}, le nom:{{this.citoyend?.nomc}}</h1></div><br><br>

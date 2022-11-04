@@ -3,8 +3,8 @@ table, th, td {
   border: 1px solid black;
 }
 h2 {
-   background: #88ccff;
-border-bottom: 5px solid #33aaff;
+   background: #ff8833;
+border-bottom: 5px solid #ff0000;
 }
 
 div {
@@ -12,7 +12,7 @@ div {
   border-bottom: double;
 }
 </style>
-<h2 > Liste de plaintes</h2>
+<h2 class="text-center"> Liste de plaintes</h2>
 <div class="container">
 <table class = "table table-striped">
   <thead>
@@ -44,8 +44,10 @@ div {
     <td> {{ plainte.resultat3 }} </td>
     <td> {{ plainte.valeur }} </td>
  <td>
-  <button (click) = "updatePlainte(plainte.id)" class = "btn btn-info"> Update {{ plainte.id }} </button></td>
+  <button (click) = "updatePlainte(plainte.id)" class = "btn btn-info"> Mis à jour {{ plainte.id }} </button></td>
+  <td>  <button (click) = "deletePlainte(plainte.id)" class = "btn btn-danger"> Supprimer {{ plainte.id }} </button></td>
   </tbody>
 </table>
 </div><br><br>
 <div *ngIf="submitted=== true"><h1>{{this.idx}}+{{this.plaintea!.citid}} </h1></div><br><br>
+<div *ngIf="submittedd=== true"><h1>On supprime la plainte qui a l'id:{{this.idx}}, details:{{this.plainted?.details1}}</h1></div><br><br>

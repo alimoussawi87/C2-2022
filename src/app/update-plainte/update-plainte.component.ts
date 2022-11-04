@@ -29,7 +29,7 @@ plainte = JSON.parse(this.plaintea);
   onSubmit(){  setTimeout(() => {
                                   this.router.navigate(['//lirePlaintesr']);
 
-                        }, 3000);
+                        }, 300);
 
 
      this.plainteService.updatePlainte(this.plainte).subscribe( data =>{

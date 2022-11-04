@@ -1,12 +1,20 @@
 <style>h1 {
  background: #8888ff;
 border-bottom: 5px solid #7766aa;
-}</style>
+}
+p
+{ background: #000000;
+border-bottom: 1px  #7766aa;
+ }
+
+</style>
 
 <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
   <ul class = "navbar-nav">
+
     <li class = "nav-item">
-      <a routerLink="lireUsagersr" routerLinkActive="active" class="nav-link" href=‘_blank’>Liste d'usagers</a>
+<p> signed in user:{{ usagersgg }}---{{ signusgg.toString() }} </p>
+      <a routerLink="lireUsagersr" routerLinkActive="active" class="nav-link" href=‘_blank’ *ngIf="signusgg.value=== true">Liste d'usagers</a>
     </li>
     <li class = "nav-item">
       <a routerLink="lireCitoyensr" routerLinkActive="active" class="nav-link" href=‘_blank’>Liste de citoyens</a>
@@ -25,7 +33,13 @@ border-bottom: 5px solid #7766aa;
   </ul>
 </nav>
 
-<h1 class="text-center">{{title}}</h1>
+<h1 class="text-center">{{title}}</h1><br><table class="table-dark table-bordered"><tr><td class="align-bottom"><p class="text-white bg-dark">Si vous êtes un citoyen qui a eu une plainte >>></p></td>
+<td class="align-middle">
+<button type="button" class="btn btn-secondary btn-lg"  (click)="signC();" > Sign in Citoyen</button> </td>
+  <tr><td class="align-middle"><p class="text-white bg-dark">Pour les Usagers >>></p></td><td class="align-middle">
+  <button type="button" class="btn btn-secondary btn-lg"  (click)="signU();" > Sign in Usager</button>
+</td></tr></table>
+<br><br>
 
 
 <div class = "container">

@@ -28,7 +28,7 @@ usager: Usager = new Usager();
     setTimeout(() => {
                      this.router.navigate(['//lireUsagersr']);
 
-           }, 3000);
+           }, 2000);
 
     this.usagerService.createUsager(this.usager).subscribe( data =>{
       console.log(data);

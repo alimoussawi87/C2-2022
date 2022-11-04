@@ -13,9 +13,9 @@ export class PlainteListComponent implements OnInit {
 
   plaintes: any[]=[];
 @LocalStorage()  plaintea?: Plainte=new Plainte();
-
+plainted?: Plainte=new Plainte;
 public submitted: boolean= false;
-
+public submittedd: boolean= false;
   idx: number=0;
 
     constructor(private  plainteService: PlainteService, private router: Router) { }
@@ -35,7 +35,26 @@ public submitted: boolean= false;
 this.submitted=true;
                            setTimeout(() => {this.router.navigate(['//updateplainter']);
 
-              }, 3000);
+              }, 300);
 }
+deletePlainte(idu: number){
 
-  }
+
+this.idx=idu;
+
+            this.plainted=this.plaintes.find(({ id }) => id === idu);
+
+
+             setTimeout(() => { window.location.reload();
+
+               }, 50);
+
+ this.plainteService.deletePlainte(this.idx).subscribe((data)=>{
+                                                        console.log(data);
+
+   }
+     , error => console.log(error));
+
+this.submittedd=true;
+
+  }}
